@@ -10,7 +10,7 @@ This repository contains a snakemake workflow to calculate cV2F scores ad cV2F m
 - [Configuration](#configuration)
 - [Usage](#usage)
 - [Output](#output)
-  - [cv2f score](#cv2f score)
+  - [cv2f score](#cv2fscore)
 
 ## Installation
 
@@ -30,7 +30,7 @@ To run the Snakemake workflow, use the provided wrapper script. This script ensu
 
 ## Output
 
-### cv2f score
+### cv2fscore
 
 For the cv2f score, the workflow generates one output file per chromosome with the suffix .cv2f.txt. Each output file will contain the following columns:
 

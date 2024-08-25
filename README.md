@@ -11,6 +11,7 @@ This repository contains a snakemake workflow to calculate cV2F scores ad cV2F m
 - [Usage](#usage)
 - [Output](#output)
   - [cv2f score](#cv2fscore)
+  - [cv2f metric](#cv2fmetric)
 
 ## Installation
 
@@ -48,7 +49,7 @@ For the cv2f score, the workflow generates one output file per chromosome with t
 Example output file header:
 `CHR BP SNP CM cV2F`
 
-### cv2f metric
+### cv2fmetric
 
 For the cv2f metric, the workflow generates one output file for all chromosomes indicated in the config.yaml with the suffix .metrics. The output file will contain the following columns:
 

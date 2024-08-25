@@ -1,6 +1,6 @@
 ## A consensus variant-to-function score to functionally prioritize variants for disease
 
-This repository contains a snakemake workflow to calculate cV2F scores. The workflow is configured to run with LSF and is designed to be flexible and easy to modify. There is also the cV2F metrics method that can be run indepenedently from the cV2F scores: https://github.com/Deylab999MSKCC/snakemake_cv2f_metric
+This repository contains a snakemake workflow to calculate cV2F scores ad cV2F metrics method.
 
 
 
@@ -29,7 +29,7 @@ To run the Snakemake workflow, use the provided wrapper script. This script ensu
 
 ## Output
 
-The workflow generates one output file per chromosome with the suffix .cv2f.txt. Each output file will contain the following columns:
+For the cv2f score, the workflow generates one output file per chromosome with the suffix .cv2f.txt. Each output file will contain the following columns:
 
 1-CHR: Chromosome number
 

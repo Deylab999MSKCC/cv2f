@@ -1,6 +1,6 @@
 ## A consensus variant-to-function score to functionally prioritize variants for disease
 
-This repository contains a snakemake workflow to calculate cV2F scores ad cV2F metrics method.
+This repository contains a snakemake workflow to calculate cV2F scores and cV2F metrics method.
 
 
 

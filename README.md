@@ -10,6 +10,7 @@ This repository contains a snakemake workflow to calculate cV2F scores ad cV2F m
 - [Configuration](#configuration)
 - [Usage](#usage)
 - [Output](#output)
+  - [cv2f score](#cv2f score)
 
 ## Installation
 

@@ -29,6 +29,8 @@ To run the Snakemake workflow, use the provided wrapper script. This script ensu
 
 ## Output
 
+### cv2f score
+
 For the cv2f score, the workflow generates one output file per chromosome with the suffix .cv2f.txt. Each output file will contain the following columns:
 
 1-CHR: Chromosome number
@@ -44,6 +46,8 @@ For the cv2f score, the workflow generates one output file per chromosome with t
 
 Example output file header:
 `CHR BP SNP CM cV2F`
+
+### cv2f metric
 
 For the cv2f metric, the workflow generates one output file for all chromosomes indicated in the config.yaml with the suffix .metrics. The output file will contain the following columns:
 

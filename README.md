@@ -30,7 +30,7 @@ To run the Snakemake workflow, use the provided wrapper script. This script ensu
 
 ## Output
 
-### cv2fscore
+## cv2f score
 
 For the cv2f score, the workflow generates one output file per chromosome with the suffix .cv2f.txt. Each output file will contain the following columns:
 

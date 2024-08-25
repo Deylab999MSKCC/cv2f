@@ -44,3 +44,17 @@ For the cv2f score, the workflow generates one output file per chromosome with t
 
 Example output file header:
 `CHR BP SNP CM cV2F`
+
+For the cv2f metric, the workflow generates one output file for all chromosomes indicated in the config.yaml with the suffix .metrics. The output file will contain the following columns:
+
+
+1-AUROC.mean: Mean Area Under the Receiver Operating Characteristic curve. This metric evaluates the ability of the model to discriminate between positive and negative classes. 
+
+2-AUROC.sd: Standard deviation of the AUROC.
+
+3-AUPRC.mean: Mean Area Under the Precision-Recall Curve. This metric is useful for imbalanced datasets and measures the trade-off between precision and recall. 
+
+4-AUPRC.sd: Standard deviation of the AUPRC.
+
+Example output file header:
+`AUROC.mean	AUROC.sd	AUPRC.mean	AUPRC.sd`

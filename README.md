@@ -31,16 +31,27 @@ Ensure the following R packages are installed in your environment:
 Edit the config.yaml file to specify your input and output settings:
 
 1-snpcell: Path to the SNP cell directory.
+
 2-featurecell: Path to the feature cell directory.
+
 3-mafpath: Path to the MAF features file.
+
 4-bimpath: Path to the BIMS directory.
+
 5-ldblockspath: Path to the LAVA LD blocks file.
+
 6-outputcell: Path to the output directory.
+
 7-script_path: Path to the R script for calculating cV2F scores.
+
 8-chromosomes: List of chromosomes to process.
+
 9-pos_prefix: Prefix for the positive set file.
+
 10-neg_prefix: Prefix for the negative set file.
+
 11-annotation_prefix: Prefix for the annotation file.
+
 12-output_prefix: Prefix for the output file.
 
 ## Usage

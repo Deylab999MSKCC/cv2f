@@ -1,0 +1,28 @@
+import os
+
+configfile: "config.yaml"
+
+rule all:
+    input:
+        expand("{outputcell}/{output_prefix}.{chrm}.cv2f.txt",
+               outputcell=config["outputcell"],
+               output_prefix=config["output_prefix"],
+               chrm=config["chromosomes"])
+
+rule generate_cv2f_scores:
+    input:
+        pos_file=lambda wildcards: os.path.join(config["snpcell"], config["pos_prefix"]),
+        neg_file=lambda wildcards: os.path.join(config["snpcell"], config["neg_prefix"]),
+        feature_file=lambda wildcards: os.path.join(config["featurecell"], f"{config['annotation_prefix']}{wildcards.chrm}.txt")
+    output:
+        cv2f_file="{outputcell}/{output_prefix}.{chrm}.cv2f.txt"
+    params:
+        chrm="{chrm}"
+    log:
+        error="{outputcell}/logs/generate_cv2f_scores_{chrm}.err",
+        output="{outputcell}/logs/generate_cv2f_scores_{chrm}.out"
+    shell:
+        """
+        conda activate my_environment
+        Rscript {config[script_path]} --positive_set {input.pos_file} --negative_set {input.neg_file} --feature_file {input.feature_file} --mafpath {config[mafpath]} --bimpath {config[bimpath]} --ldblockspath {config[ldblockspath]} --output_cv2f {output.cv2f_file} --chrm {params.chrm} 2> {log.error} 1> {log.output}
+        """

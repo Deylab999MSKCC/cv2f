@@ -60,6 +60,8 @@ There are two seperate Snakemake workflows, one for cv2f score and the other is 
 
 `snakemake --cores 1`
 
+If you want to run the workflow in the background:
+
 `nohup snakemake --cores 1 > snakemake.log 2>&1 &`
 
 

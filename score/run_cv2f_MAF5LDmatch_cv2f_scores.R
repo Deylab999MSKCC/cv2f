@@ -18,16 +18,16 @@ args <- commandArgs(trailingOnly = TRUE)
 print(args)
 
 option_list <- list(
-  make_option("--positive_set", type="character", default = "data/positive_set.txt",
+  make_option("--positive_set", type="character", default = "../data/positive_set.txt",
               help="rsIDs of SNPs in the positive set (celltype relevant trait)"),
-  make_option("--negative_set", type="character", default = "data/negative_set.txt",
+  make_option("--negative_set", type="character", default = "../data/negative_set.txt",
               help="rsIDs of SNPs in the negative set (non-celltype relevant traits)"),
-  make_option("--feature_file", type="character", default = "data/feature_table.txt",
+  make_option("--feature_file", type="character", default = "../data/feature_tables/baseline.",
               help="Data frame of feature tables related to a cell type"),
   make_option("--bimpath", type="character", help="Path and prefix of the bimfile of the BIMFILE"),
   make_option("--mafpath", type="character", help="Path and prefix of the frequency file for all SNPs"),
   make_option("--ldblockspath", type="character", help="Path and prefix of the LD blocks file"),
-  make_option("--output_cv2f", type="character", default = "data/out",
+  make_option("--output_cv2f", type="character", default = "../data/out",
               help=" Path of the output celltype cV2F file"),
   make_option("--chrm", type="integer", default = "22",
               help=" chromosome number to produce scores for")

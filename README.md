@@ -77,7 +77,7 @@ For the cv2f score, the workflow generates one output file per chromosome with t
 
 3-SNP: SNP identifier
 
-4-CM: 
+4-CM: Centimorgan distance
 
 5-cV2F: cV2F score
 

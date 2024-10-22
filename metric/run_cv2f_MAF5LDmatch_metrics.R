@@ -1,6 +1,6 @@
 #modified by Thahmina A. Ali
 
-required_packages <- c("data.table", "xgboost", "pROC", "PRROC", "optparse")
+required_packages <- c("data.table", "xgboost", "pROC", "PRROC", "optparse", "SHAPforxgboost")
 new_packages <- required_packages[!(required_packages %in% installed.packages()[,"Package"])]
 
 if(length(new_packages)) install.packages(new_packages, repos='http://cran.us.r-project.org')
@@ -12,7 +12,7 @@ library(optparse)
 library(xgboost)
 library(pROC)
 library(PRROC)
-#require(SHAPforxgboost)
+require(SHAPforxgboost)
 require(plyr)
 require(dplyr)
 library(stringr)
@@ -23,16 +23,16 @@ args <- commandArgs(trailingOnly = TRUE)
 print(args)
 
 option_list <- list(
-  make_option("--positive_set", type="character", default = "data/positive_set.txt",
+  make_option("--positive_set", type="character", default = "../data/positive_set.txt",
               help="rsIDs of SNPs in the positive set (celltype relevant trait)"),
-  make_option("--negative_set", type="character", default = "data/negative_set.txt",
+  make_option("--negative_set", type="character", default = "../data/negative_set.txt",
               help="rsIDs of SNPs in the negative set (non-celltype relevant traits)"),
-  make_option("--feature_file", type="character", default = "data/feature_table.txt",
+  make_option("--feature_file", type="character", default = "../data/feature_tables/baseline.",
               help="Data frame of feature tables related to a cell type"),
   make_option("--bimpath", type="character", help="Path and prefix of the bimfile of the BIMFILE"),
   make_option("--mafpath", type="character", help="Path and prefix of the frequency file for all SNPs"),
   make_option("--ldblockspath", type="character", help="Path and prefix of the LD blocks file"),
-  make_option("--output_metrics", type="character", default = "data/out",
+  make_option("--output_metrics", type="character", default = "../data/out",
               help=" Path of the output AUROC/AUPRC metrics file")
 )
 
@@ -171,20 +171,20 @@ for(num_iter in 1:5){
   aucvec = c(aucvec, auc(roc_test))
   prcvec = c(prcvec, pr$auc.integral)
 
-  #shap_values <- shap.values(xgb_model = bstSparse, X_train = as.matrix(training_data))
-  #all_shap[[num_iter]] <- shap_values$shap_score
+  shap_values <- shap.values(xgb_model = bstSparse, X_train = as.matrix(training_data))
+  all_shap[[num_iter]] <- shap_values$shap_score
   
   cat("We are at iter:", num_iter, "\n")
 }
 
-#new_shap <- bind_rows(all_shap)
-#new_training <- bind_rows(all_training)
-#shap_long <- shap.prep(shap_contrib = new_shap, X_train = as.matrix(new_training))
-#write.csv(shap_long, paste0(sub('.[^.]*$', '', opt$output_metrics), ".shap_values.csv"), quote=FALSE, row.names = FALSE)
-#shap_long <- shap.prep(shap_contrib = new_shap, X_train = as.matrix(new_training), top_n = 25)
-#png(filename=paste0(sub('.[^.]*$', '', opt$output_metrics), ".png"), width = 225 , height = 175, units='mm', res = 900, type="cairo")
-#shap.plot.summary(shap_long, min_color_bound = "#008afb", max_color_bound = "#f70068",)
-#dev.off()
+new_shap <- bind_rows(all_shap)
+new_training <- bind_rows(all_training)
+shap_long <- shap.prep(shap_contrib = new_shap, X_train = as.matrix(new_training))
+write.csv(shap_long, paste0(sub('.[^.]*$', '', opt$output_metrics), ".shap_values.csv"), quote=FALSE, row.names = FALSE)
+shap_long <- shap.prep(shap_contrib = new_shap, X_train = as.matrix(new_training), top_n = 25)
+png(filename=paste0(sub('.[^.]*$', '', opt$output_metrics), ".png"), width = 225 , height = 175, units='mm', res = 900, type="cairo")
+shap.plot.summary(shap_long, min_color_bound = "#008afb", max_color_bound = "#f70068",)
+dev.off()
 
 dff_roc = data.frame("AUROC.mean" = mean(aucvec),
                  "AUROC.sd" = sd(aucvec),

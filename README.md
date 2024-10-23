@@ -36,7 +36,7 @@ Ensure the following R packages are installed in your environment:
 
 `install.packages(c("data.table", "xgboost", "pROC", "PRROC", "optparse", "R.utils", "lightgbm", "zoo"))`
 
-BiocManager::install(c("ensembldb", "EnsDb.Hsapiens.v75"))
+`BiocManager::install(c("ensembldb", "EnsDb.Hsapiens.v75"))`
 
 Warning: 
 

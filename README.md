@@ -36,7 +36,10 @@ Ensure the following R packages are installed in your environment:
 
 `install.packages(c("data.table", "xgboost", "pROC", "PRROC", "optparse", "R.utils", "lightgbm", "zoo"))`
 
-`BiocManager::install(c("ensembldb", "EnsDb.Hsapiens.v75"))`
+`BiocManager::install(c("ensembldb", "EnsDb.Hsapiens.v75", "EnsDb.Hsapiens.v86"))`
+
+`devtools::install_github("liuyanguu/SHAPforxgboost")`
+`devtools::install_github("myles-lewis/locuszoomr")`
 
 Warning: 
 

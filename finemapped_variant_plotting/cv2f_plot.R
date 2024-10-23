@@ -17,13 +17,14 @@ option_list <- list(
 	      help="The rsid of the variant to center"),
   make_option("--outputcell", type="character", default = "../results/plots",
 	      help="Output folder for the plot"),
-  make_option("--cv2f_dir", type="character",
+  make_option("--cv2f_dir", type="character", default = "../results/SuSIE_finemap/EMS_all_cV2F",
 	      help="Directory of variants finemapped with cV2F scores"),
-  make_option("--trait_cv2f_dir", type="character",
+  make_option("--trait_cv2f_dir", type="character", default = "../results/SuSIE_finemap/EMS_all_Liver_cV2F",
               help="Directory of variants finemapped with trait specific cV2F score. Only required if not tissue-agnostic"),
-  make_option("--sumstats_dir", type="character",
+  make_option("--sumstats_dir", type="character", default = "../data/sumstats/sumstats_Dey"
 	      help="Directory of GWAS summary stats"),
-  make_option("--bimpath", type="character", help="Path and prefix of the bimfile of the BIMFILE")
+  make_option("--bimpath", type="character", default = "../data/1000G_BIMS_hg38/1000G.EUR.QC.",
+	      help="Path and prefix of the bimfile of the BIMFILE")
 )
 
 opt <- parse_args(OptionParser(option_list=option_list))

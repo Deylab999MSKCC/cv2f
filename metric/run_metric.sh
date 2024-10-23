@@ -4,7 +4,7 @@ conda activate cv2f
 
 snpcell="../data"
 featurecell="../data/feature_tables"
-mafpath="..//MAF_features_Aug032022.txt"
+mafpath="../data/MAF_features_Aug032022.txt"
 bimpath="../data/1000G_BIMS_hg38/1000G.EUR.QC."
 ldblockspath="../data/LAVA_LDblocks_published.txt"
 outputcell="../results/metric"

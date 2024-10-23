@@ -30,10 +30,13 @@ option_list <- list(
               help="rsIDs of SNPs in the negative set for validation (non-celltype relevant traits)"),
   make_option("--feature_file", type="character", default = "../data/feature_tables/baseline.",
               help="Data frame of feature tables related to a cell type"),
-  make_option("--bimpath", type="character", help="Path and prefix of the bimfile of the BIMFILE"),
-  make_option("--mafpath", type="character", help="Path and prefix of the frequency file for all SNPs"),
-  make_option("--ldblockspath", type="character", help="Path and prefix of the LD blocks file"),
-  make_option("--output_metrics", type="character", default = "../data/out",
+  make_option("--bimpath", type="character", default = "../data/1000G_BIMS_hg38/1000G.EUR.QC.",
+	      help="Path and prefix of the bimfile of the BIMFILE"),
+  make_option("--mafpath", type="character", default = "../data/MAF_features_Aug032022.txt",
+	      help="Path and prefix of the frequency file for all SNPs"),
+  make_option("--ldblockspath", type="character", default = "../data/LAVA_LDblocks_published.txt",
+	      help="Path and prefix of the LD blocks file"),
+  make_option("--output_metrics", type="character", default = "../results/comparisons_metric/mwe_vs_mwe_baseline.metrics",
               help=" Path of the output AUROC/AUPRC metrics file")
 )
 

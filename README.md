@@ -19,12 +19,23 @@ Ensure you have Conda installed. If not, you can install it from [here](https://
 
 Create and activate a Conda environment with the necessary dependencies:
 
-`conda create -n cv2f -c bioconda -c conda-forge snakemake r-base`
+`conda create -n cv2f -c bioconda -c conda-forge snakemake r-base=4.2.0`
 `conda activate cv2f`
+
+`conda install conda-forge::r-devtools`
+`conda install conda-forge::r-matrix`
+`conda install conda-forge::r-ggplot2`
+`conda install conda-forge::r-ggforce`
+`conda install conda-forge::r-ggExtra`
+`conda install conda-forge::r-ggpubr`
+
+
+‘ggplot2’, ‘ggforce’, ‘ggExtra’, ‘ggpubr
 
 Ensure the following R packages are installed in your environment:
 
-`install.packages(c("data.table", "xgboost", "pROC", "PRROC", "optparse"))`
+`install.packages(c("data.table", "xgboost", "pROC", "PRROC", "optparse", "R.utils", "lightgbm"))`
+Warning: 
 
 ## Configuration
 

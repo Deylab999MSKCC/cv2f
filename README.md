@@ -1,6 +1,6 @@
 ## A consensus variant-to-function score to functionally prioritize variants for disease
 
-This repository contains a snakemake workflow to calculate cV2F scores and cV2F metrics method. These two methods can be run indepenedently. 
+This repository contains a workflow for the cV2F method.
 
 
 ## Table of Contents
@@ -16,32 +16,21 @@ This repository contains a snakemake workflow to calculate cV2F scores and cV2F 
 
 Ensure you have Conda installed. If not, you can install it from [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html).
 
-
 Create and activate a Conda environment with the necessary dependencies:
 
-`conda create -n cv2f -c bioconda -c conda-forge snakemake r-base=4.2.0`
-`conda activate cv2f`
-
-`conda install conda-forge::r-devtools`
-`conda install conda-forge::r-matrix`
-`conda install conda-forge::r-ggplot2`
-`conda install conda-forge::r-ggforce`
-`conda install conda-forge::r-ggExtra`
-`conda install conda-forge::r-ggpubr`
-
-
-ERROR: dependencies ‘AnnotationFilter’, ‘BiocGenerics’, ‘ensembldb’, ‘GenomeInfoDb’, ‘GenomicRanges’, ‘IRanges’, ‘rtracklayer’ are not available for package ‘locuszoomr’
+```
+conda create -n cv2f -c bioconda -c conda-forge snakemake r-base=4.2.0
+conda activate cv2f
+conda install conda-forge::r-devtools r-matrix r-ggplot2 r-ggforce r-ggExtra r-ggpubr
+```
 
 Ensure the following R packages are installed in your environment:
 
-`install.packages(c("data.table", "xgboost", "pROC", "PRROC", "optparse", "R.utils", "lightgbm", "zoo"))`
-
-`BiocManager::install(c("ensembldb", "EnsDb.Hsapiens.v75", "EnsDb.Hsapiens.v86"))`
-
-`devtools::install_github("liuyanguu/SHAPforxgboost")`
-`devtools::install_github("myles-lewis/locuszoomr")`
-
-Warning: 
+```
+install.packages(c("data.table", "xgboost", "pROC", "PRROC", "optparse", "R.utils", "lightgbm", "zoo"))
+BiocManager::install(c("ensembldb", "EnsDb.Hsapiens.v86"))
+devtools::install_github(c("liuyanguu/SHAPforxgboost", "myles-lewis/locuszoomr"))
+```
 
 ## Configuration
 

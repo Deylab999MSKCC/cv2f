@@ -35,3 +35,9 @@ devtools::install_github(c("liuyanguu/SHAPforxgboost", "myles-lewis/locuszoomr")
 ## Usage
 
 For detailed instructions on running the cV2F model check the [Wiki](https://github.com/Deylab999MSKCC/cv2f/wiki).
+
+## cV2F Data
+
+cV2F scores both tissue-agnostic and tissue-specific can be found in https://mskcc.box.com/shared/static/hsrogtr3fddtmd53hyy5ph7dlp20eq72.txt.
+
+cV2F fine-mapping results can be found in https://mskcc.box.com/s/wyl206gnn5tqhgnpuakzik98yrdonilw.

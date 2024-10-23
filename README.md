@@ -30,11 +30,14 @@ Create and activate a Conda environment with the necessary dependencies:
 `conda install conda-forge::r-ggpubr`
 
 
-‘ggplot2’, ‘ggforce’, ‘ggExtra’, ‘ggpubr
+ERROR: dependencies ‘AnnotationFilter’, ‘BiocGenerics’, ‘ensembldb’, ‘GenomeInfoDb’, ‘GenomicRanges’, ‘IRanges’, ‘rtracklayer’ are not available for package ‘locuszoomr’
 
 Ensure the following R packages are installed in your environment:
 
 `install.packages(c("data.table", "xgboost", "pROC", "PRROC", "optparse", "R.utils", "lightgbm", "zoo"))`
+
+`BiocManager::install(c("ensembldb", "EnsDb.Hsapiens.v75"))`
+
 Warning: 
 
 ## Configuration

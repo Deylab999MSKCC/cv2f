@@ -42,13 +42,6 @@ option_list <- list(
 opt <- parse_args(OptionParser(option_list=option_list))
 dput(opt)
 
-# opt = list()
-# opt$positive_set =  "/data/deyk/GWAS/UKBiobank/finemapping/Finemap_SNPsets/ALL_combined_PIP0_75.txt"
-# opt$negative_set =  "/data/deyk/GWAS/UKBiobank/finemapping/Finemap_SNPsets/Notfinemapped_PIP0_01.txt"
-# opt$feature_file = "/data/deyk/kushal/cV2F/data/Deliverables/Feature_Tables/baselineLD/feature_table_perchr."
-# opt$mafpath = "/data/deyk/extras/MAF_features_Aug032022.txt"
-# opt$bimpath = "/data/deyk/extras/1000G_BIMS_hg38/1000G.EUR.QC."
-# opt$ldblockspath = "/data/deyk/extras/loci_files/LAVA_LDblocks_published.txt"
 
 pre_positive_snps = read.table(opt$positive_set, header=F)[,1]
 pre_negative_snps = read.table(opt$negative_set, header=F)[,1]

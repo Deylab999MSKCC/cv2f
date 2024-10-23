@@ -2,6 +2,7 @@ library(data.table)
 library(locuszoomr)
 library("EnsDb.Hsapiens.v86")
 library(R.utils)
+library(optparse)
 
 options(echo=TRUE) # if you want see commands in output file
 args <- commandArgs(trailingOnly = TRUE)
@@ -26,28 +27,18 @@ option_list <- list(
 	      help="Path and prefix of the bimfile of the BIMFILE")
 )
 
+
 opt <- parse_args(OptionParser(option_list=option_list))
 dput(opt)
 
 tissue = opt$tissue
 trait = opt$trait
 rsid = opt$rsid
-outputcell = out$outputcell
-cv2f_dir = out$cv2f_dir
-trait_cv2f_dir = out$trait_cv2f_dir
+outputcell = opt$outputcell
+cv2f_dir = opt$cv2f_dir
+trait_cv2f_dir = opt$trait_cv2f_dir
 sumstats_dir = opt$sumstats_dir
 bimpath = opt$bimpath
-
-
-#cv2f_dir = "../results/SuSIE_finemap/EMS_all_cV2F"
-#if (tissue == "LIVER") {
-#    trait_cv2f_dir = "/lila/data/deyk/fabiha/20240814_second_updated_cv2f/SuSIE_finemap/EMS_all_Liver_cV2F"
-#} else if (tissue == "BLOOD") {
-#    trait_cv2f_dir = "/lila/data/deyk/fabiha/20240814_second_updated_cv2f/SuSIE_finemap/EMS_all_Blood_cV2F"
-#}
-#sumstats_dir = "/lila/data/deyk/GWAS/sumstats/sumstats_Dey"
-#results_dir = "/lila/data/deyk/fabiha/20240814_second_updated_cv2f/cv2f_plots"
-
 
 
 cv2f = read.table(paste0(cv2f_dir, "/UKBB.", trait, ".SuSiE.cv2f_ukbb.txt"), sep="\t", header=TRUE)

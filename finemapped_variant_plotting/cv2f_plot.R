@@ -1,6 +1,5 @@
 library(data.table)
 library(locuszoomr)
-library("EnsDb.Hsapiens.v75")
 library("EnsDb.Hsapiens.v86")
 library(R.utils)
 

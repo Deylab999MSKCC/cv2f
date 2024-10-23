@@ -34,7 +34,7 @@ Create and activate a Conda environment with the necessary dependencies:
 
 Ensure the following R packages are installed in your environment:
 
-`install.packages(c("data.table", "xgboost", "pROC", "PRROC", "optparse", "R.utils", "lightgbm"))`
+`install.packages(c("data.table", "xgboost", "pROC", "PRROC", "optparse", "R.utils", "lightgbm", "zoo"))`
 Warning: 
 
 ## Configuration

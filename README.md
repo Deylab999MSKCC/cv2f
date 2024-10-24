@@ -2,18 +2,9 @@
 
 This repository contains a workflow for the cV2F method.
 
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Output](#output)
-
-
 ## License
 
-Copyright (c) 2018-2019, Kushal Dey.
+Copyright (c) 2024, Tabassum Fabiha.
 
 All source code and software in this repository are made available under the terms of the GNU General Public License. See the LICENSE file for the full text of the license.
 

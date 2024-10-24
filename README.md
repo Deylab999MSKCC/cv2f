@@ -11,6 +11,20 @@ This repository contains a workflow for the cV2F method.
 - [Output](#output)
 
 
+## License
+
+Copyright (c) 2018-2019, Kushal Dey.
+
+All source code and software in this repository are made available under the terms of the GNU General Public License. See the LICENSE file for the full text of the license.
+
+## Citation
+
+If you find this pipeline or the cV2F scores useful for your work please cite our paper which is out on bioRxiv:
+
+> Fabiha et al 2024. A consensus variant-to-function score to functionally prioritize variants for disease. bioRxiv.
+
+
+
 ## Installation
 
 Ensure you have Conda installed. If not, you can install it from [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html).
@@ -41,11 +55,8 @@ cV2F scores both tissue-agnostic and tissue-specific can be found in https://msk
 
 cV2F fine-mapping results can be found in https://mskcc.box.com/s/wyl206gnn5tqhgnpuakzik98yrdonilw.
 
-## Citation
+## Credits
 
-If you find this pipeline or the cV2F scores useful for your work please cite our paper which is out on bioRxiv:
+This software was developed by Tabassum Fabiha and Kushal Dey at the Memorial Sloan Kettering Cancer Center. For any questions or comments, please contact Tabassum Fabiha at fabihat@mskcc.org.
 
-Fabiha et al 2024. A consensus variant-to-function score to functionally prioritize variants for disease. bioRxiv.
-
-## Acknowledgements
-Thank you to all co-authors of the cV2F manuscript and the ENCODE4 Consortium.
+The authors would like to acknowledge ENCODE PHASE4 and all co-authors of the cV2F manuscript for helpful feedback and sharing data.

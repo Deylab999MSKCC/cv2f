@@ -9,8 +9,7 @@ This repository contains a workflow for the cV2F method.
 - [Configuration](#configuration)
 - [Usage](#usage)
 - [Output](#output)
-  - [cv2f score](#cv2fscore)
-  - [cv2f metric](#cv2fmetric)
+
 
 ## Installation
 
@@ -41,3 +40,12 @@ For detailed instructions on running the cV2F model check the [Wiki](https://git
 cV2F scores both tissue-agnostic and tissue-specific can be found in https://mskcc.box.com/shared/static/hsrogtr3fddtmd53hyy5ph7dlp20eq72.txt.
 
 cV2F fine-mapping results can be found in https://mskcc.box.com/s/wyl206gnn5tqhgnpuakzik98yrdonilw.
+
+## Citation
+
+If you find this pipeline or the cV2F scores useful for your work please cite our paper which is out on bioRxiv:
+
+Fabiha et al 2024. A consensus variant-to-function score to functionally prioritize variants for disease. bioRxiv.
+
+## Acknowledgements
+Thank you to all co-authors of the cV2F manuscript and the ENCODE4 Consortium.

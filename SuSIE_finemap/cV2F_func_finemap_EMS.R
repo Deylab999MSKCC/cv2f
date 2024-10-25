@@ -8,7 +8,7 @@ args <- commandArgs(trailingOnly = TRUE)
 print(args)
 
 option_list <- list(
-  make_option("--trait", type="character", default = "../data/biosamples.txt", help="Biosample names"),
+  make_option("--trait", type="character", default = "UKBB.FEV1FVC.SuSiE", help="Biosample names"),
   make_option("--finemappath", type="character", default = "../data/ukbb-finemapping",
 	      help="Path to directory of finemapped traits"),
   make_option("--bimpath", type="character", default = "../data/1000G_BIMS_hg38/1000G.EUR.QC.",

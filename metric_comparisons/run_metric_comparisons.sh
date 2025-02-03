@@ -12,8 +12,8 @@ outputcell="../results/comparisons_metric"
 
 pos_train_file="positive_set.txt"
 neg_train_file="negative_set.txt"
-pos_test_file="positive_set.txt"
-neg_test_file="negative_set.txt"
+pos_test_file="positive_set_validation.txt"
+neg_test_file="negative_set_validation.txt"
 feature_file="baseline."
 metric_file="mwe_vs_mwe_baseline.metrics"
 echo $pos_train_file $neg_train_file $pos_test_file $neg_test_file $metric_file
